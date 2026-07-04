@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Champ Parle — Liens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --soil:#211508;
+    --clay:#9B4B26;
+    --wheat:#D9A441;
+    --paper:#F3E9D2;
+    --field:#33502F;
+    --line: rgba(33,21,8,0.15);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background: var(--soil);
+    background-image:
+      repeating-linear-gradient(180deg, rgba(217,164,65,0.05) 0px, rgba(217,164,65,0.05) 1px, transparent 1px, transparent 42px);
+    color: var(--paper);
+    font-family:'Work Sans', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding: 48px 20px 80px;
+  }
+  .page{
+    width:100%;
+    max-width:460px;
+  }
+  .header{
+    text-align:center;
+    margin-bottom:38px;
+  }
+  .mark{
+    width:64px; height:64px;
+    margin:0 auto 18px;
+    display:block;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:2rem;
+    letter-spacing:0.01em;
+    margin:0 0 8px;
+    color: var(--wheat);
+  }
+  .tagline{
+    font-size:0.95rem;
+    color: rgba(243,233,210,0.75);
+    margin:0;
+    line-height:1.5;
+  }
+  .furrow{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:34px 0 20px;
+    opacity:0.55;
+  }
+  .furrow span{
+    font-family:'Work Sans';
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--wheat);
+    white-space:nowrap;
+  }
+  .furrow .rule{
+    flex:1;
+    height:1px;
+    background: repeating-linear-gradient(90deg, var(--wheat) 0 6px, transparent 6px 12px);
+  }
+  .plot{
+    display:block;
+    text-decoration:none;
+    background: rgba(243,233,210,0.04);
+    border:1px solid var(--line);
+    border-left: 3px solid var(--wheat);
+    border-radius: 6px;
+    padding:18px 20px;
+    margin-bottom:14px;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .plot:hover, .plot:focus-visible{
+    background: rgba(217,164,65,0.10);
+    border-left-color: var(--clay);
+    transform: translateX(2px);
+    outline: none;
+  }
+  .plot:focus-visible{
+    box-shadow: 0 0 0 2px var(--wheat);
+  }
+  .plot-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.08rem;
+    color: var(--paper);
+    margin-bottom:4px;
+  }
+  .plot-desc{
+    font-size:0.85rem;
+    color: rgba(243,233,210,0.65);
+    line-height:1.4;
+  }
+  .plot.field-green{ border-left-color: var(--field); }
+  .plot.field-clay{ border-left-color: var(--clay); }
+
+  footer{
+    text-align:center;
+    margin-top:40px;
+    font-size:0.75rem;
+    color: rgba(243,233,210,0.4);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .plot{ transition:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <svg class="mark" viewBox="0 0 64 64" fill="none">
+        <path d="M32 54 C30 44 33 34 32 24" stroke="#D9A441" stroke-width="3" stroke-linecap="round"/>
+        <g fill="#D9A441">
+          <ellipse cx="24" cy="28" rx="5" ry="9" transform="rotate(-30 24 28)"/>
+          <ellipse cx="40" cy="28" rx="5" ry="9" transform="rotate(30 40 28)"/>
+          <ellipse cx="23" cy="38" rx="5" ry="9" transform="rotate(-30 23 38)"/>
+          <ellipse cx="41" cy="38" rx="5" ry="9" transform="rotate(30 41 38)"/>
+          <ellipse cx="32" cy="19" rx="4.5" ry="8"/>
+        </g>
+      </svg>
+      <h1>Le Champ Parle</h1>
+      <p class="tagline">Économie agraire &amp; souveraineté alimentaire,<br>expliquées simplement. 🇹🇬 → 🌍</p>
+    </div>
+
+    <div class="furrow"><span>À propos</span><div class="rule"></div></div>
+
+    <a class="plot field-clay" href="https://www.facebook.com/share/14jd5C3L5o5/" target="_blank" rel="noopener">
+      <div class="plot-title">FBS SARL U — Fabrioli Services</div>
+      <div class="plot-desc">Services business &amp; facilitation du commerce international. Page Facebook officielle.</div>
+    </a>
+
+    <a class="plot field-green" href="#" target="_blank" rel="noopener">
+      <div class="plot-title">JSD — Jeunes Sentinelles au Développement</div>
+      <div class="plot-desc">ONG active dans la préfecture de Binah, région de la Kara. Développement communautaire &amp; santé-climat.</div>
+    </a>
+
+    <div class="furrow"><span>Me contacter</span><div class="rule"></div></div>
+
+    <a class="plot" href="https://wa.me/22893994254" target="_blank" rel="noopener">
+      <div class="plot-title">WhatsApp</div>
+      <div class="plot-desc">Contactez-moi directement pour vos démarches business ou vos questions.</div>
+    </a>
+
+    <a class="plot" href="mailto:fabrioliservices@gmail.com">
+      <div class="plot-title">Email professionnel</div>
+      <div class="plot-desc">fabrioliservices@gmail.com</div>
+    </a>
+
+    <div class="furrow"><span>Suivre</span><div class="rule"></div></div>
+
+    <a class="plot" href="https://www.facebook.com/share/17pTEZkJQQ/" target="_blank" rel="noopener">
+      <div class="plot-title">Facebook</div>
+      <div class="plot-desc">Suivez mon actualité et mes publications.</div>
+    </a>
+
+    <footer>Le Champ Parle · Économie agraire</footer>
+  </div>
+</body>
+</html>
